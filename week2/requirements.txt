@@ -1,0 +1,11 @@
+mlflow
+jupyter
+scikit-learn
+pandas
+seaborn
+hyperopt
+xgboost
+fastparquet
+boto3
+# pip install --upgrade nbdime
+# pip install --upgrade jupyterlab jupyterlab-git
