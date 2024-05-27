@@ -162,6 +162,6 @@ cython_debug/
 # ignore sh
 *.sh
 week*/Data/*
-week2/artifacts/*
+#week2/artifacts/*
 #week2/mlruns/*
 week2/output/*
