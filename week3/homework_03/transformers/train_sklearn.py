@@ -31,10 +31,10 @@ def transform(data, *args, **kwargs):
     # Specify your transformation logic here
     print("Select categorical variables")
     categorical = ['PULocationID', 'DOLocationID']
-    data = data[categorical]
+    df = data[categorical]
     
     print("transform df to dict")
-    data_dicts = data.to_dict(orient='records')
+    data_dicts = df.to_dict(orient='records')
     
     print("Fit and transform a dict vectorizer from the data")
     dv = DictVectorizer()

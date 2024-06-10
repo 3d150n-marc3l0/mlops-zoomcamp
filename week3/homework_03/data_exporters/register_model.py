@@ -40,6 +40,17 @@ def export_data(data, *args, **kwargs):
         
         # Log the DictVectorizer as an artifact
         mlflow.log_artifact(vectorizer_path, artifact_path="vectorizer")
+
+
+        # Calculate and log the model size
+        model_pickle_path = 'linear_regression_model.pkl'
+        with open(model_pickle_path, 'wb') as f:
+            pickle.dump(lr, f)
+
+        # Log the model_size as an artifact
+        model_size_bytes = os.path.getsize(model_pickle_path)
+        print(model_size_bytes)
+        mlflow.log_metric('model_size_bytes', model_size_bytes)
         
         print("Model and DictVectorizer logged to MLflow")
 
